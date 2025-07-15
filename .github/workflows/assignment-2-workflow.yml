@@ -1,0 +1,16 @@
+name: Print hello.txt content
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  show-file-contents-Assignment-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Print hello.txt content
+        run: cat Assignments/Assignment-1/hello.txt
