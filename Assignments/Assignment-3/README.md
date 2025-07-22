@@ -5,6 +5,13 @@
 
 ### Output
 ```bash
+<<<<<<< HEAD
+=======
+
+# Docker Deployment
+docker-compose up -d --build              # Build and run containers
+
+>>>>>>> 5aa12467b2bdafd0b13669e31a973030ad2373c9
 # Application Endpoints
 http://localhost:3000/        # Hello World (direct)
 http://localhost:3000/api     # JSON API (direct)
@@ -14,6 +21,7 @@ http://localhost:8080/api     # JSON API (via Nginx)
 # Docker Hub Reference
 Image: zamshed/assignment-3-express-app
 URL: https://hub.docker.com/r/zamshed/assignment-3-express-app
+<<<<<<< HEAD
 ```
 ### Dockerfile
 ```bash
@@ -106,3 +114,5 @@ EOF
 docker-compose up -d --build
 
 ```
+=======
+>>>>>>> 5aa12467b2bdafd0b13669e31a973030ad2373c9
