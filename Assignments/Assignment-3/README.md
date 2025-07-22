@@ -1,49 +1,31 @@
-
-
 ## Prerequisites
-
 - Node Version 22
+- Docker
+- Docker Compose
 
-
-### 1. For Run This Applications
+### Complete Command Reference
 ```bash
-# install packages
-npm install 
+# Installation & Testing
+npm install          # Install all dependencies
+npm check           # Run application tests
 
-# Testing The Applications
-npm check
+# Execution Options
+npm start           # Run directly (port 3000)
 
-# For Run the application
-npm start
-```
+# PM2 Process Control
+pm2 delete node-app || true              # Remove existing instance
+pm2 start "./src/server.js" --name node-app  # Launch via PM2
+pm2 save                                 # Save process list
 
+# Docker Deployment
+docker-compose up -d --build              # Build and run containers
 
-### Deployment Process
-1. **Cleanup**: Removes existing process if running
-   ```bash
-   pm2 delete node-app || true
-   ```
+# Application Endpoints
+http://localhost:3000/        # Hello World (direct)
+http://localhost:3000/api     # JSON API (direct)
+http://localhost:8080/        # Hello World (via Nginx)
+http://localhost:8080/api     # JSON API (via Nginx)
 
-2. **Start Application**: Launches with absolute path
-   ```bash
-   pm2 start "./src/server.js" --name node-app
-   ```
-
-3. **Save Process List**: Persists PM2 configuration
-   ```bash
-   pm2 save
-   ```
-
-### About The Applications
-1. **Route**: This Application has 2 route
-   ```bash
-   / # this will show a hello world page
-   ```
-      ```bash
-   /api # this will response a json
-   ```
-
-2. **Default Port**: By Default this application will run on port 3000
-
-
-
+# Docker Hub Reference
+Image: zamshed/assignment-3-express-app
+URL: https://hub.docker.com/r/zamshed/assignment-3-express-app
