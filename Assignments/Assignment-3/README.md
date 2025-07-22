@@ -7,9 +7,6 @@
 ```bash
 
 
-# Docker Deployment
-docker-compose up -d --build              # Build and run containers
-
 # Application Endpoints
 http://localhost:3000/        # Hello World (direct)
 http://localhost:3000/api     # JSON API (direct)
