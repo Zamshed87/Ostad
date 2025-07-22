@@ -10,7 +10,6 @@
 # Docker Deployment
 docker-compose up -d --build              # Build and run containers
 
->>>>>>> 5aa12467b2bdafd0b13669e31a973030ad2373c9
 # Application Endpoints
 http://localhost:3000/        # Hello World (direct)
 http://localhost:3000/api     # JSON API (direct)
